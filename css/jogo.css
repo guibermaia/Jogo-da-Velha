@@ -1,0 +1,46 @@
+table{
+    width: 80vh;
+    height: 80vh;
+    text-align: center;
+    margin: auto;
+}
+/* @media <  */
+tr, th {
+    border: 1px solid #dddddd;
+    padding: 10px;
+    text-align: center;
+    font-size: 50px;
+    font-family: cursive;
+} 
+.linha1:hover{
+    cursor: pointer;
+}
+
+.linha2:hover{
+    cursor: pointer;
+}
+
+.linha3:hover{
+    cursor: pointer;
+}
+
+h1{
+    text-align: center;
+}
+.botaoDiv{
+    text-align: center;
+}
+.botao{
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: lightslategrey;
+    color: aliceblue;
+}
+
+.botao:hover{
+    cursor: pointer;
+    background-color: slategrey;
+}

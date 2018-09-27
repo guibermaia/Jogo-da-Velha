@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jogo da Velha</title>
+    <link href="./css/jogo.css" type="text/css" rel="stylesheet">
+    <script src="jogoJS.js"></script>
+
+</head>
+
+<body>
+    <h1>Jogo da Velha </h1>
+    <Div class="botaoDiv">
+        <button class="botao" id="x" onclick="escolhaBotao('x')">Começar com X</button>
+        <button class="botao" id="o" onclick="escolhaBotao('o')">Começar com O</button>
+        <button class="botao">Novo Jogo</button>
+    </Div>
+    <table>
+        <tr>
+            <th class="linha1" id="e0" type="button" onclick="campo('e0')">.</th>
+            <th class="linha1" id="e1" type="button" onclick="campo('e1')">.</th>
+            <th class="linha1" id="e2" type="button" onclick="campo('e2')">.</th>
+        </tr>
+        <tr>
+            <th class="linha2" id="e3" type="button" onclick="campo('e3')">.</th>
+            <th class="linha2" id="e4" type="button" onclick="campo('e4')">.</th>
+            <th class="linha2" id="e5" type="button" onclick="campo('e5')">.</th>
+        </tr>
+        <tr>
+            <th class="linha3" id="e6" type="button" onclick="campo('e6')">.</th>
+            <th class="linha3" id="e7" type="button" onclick="campo('e7')">.</th>
+            <th class="linha3" id="e8" type="button" onclick="campo('e8')">.</th>
+        </tr>
+    </table>
+
+
+</body>
+
+</html>
