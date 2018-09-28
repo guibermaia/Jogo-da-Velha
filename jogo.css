@@ -1,0 +1,120 @@
+body{
+    background-color: #34495e;
+}
+.est-aviso{
+    font-size: 30px;
+    color: red;
+    margin: 0px;
+}
+.est-resultado{
+    font-size: 25px;
+}
+h1{
+    text-align: center;
+    color: #ffffff;
+}
+.img-velha.mostra{
+    display: block;
+}
+.img-velha{
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+.principal-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao-div{
+    text-align: center;
+    color: #ffffff;
+}
+
+table{
+    margin: auto;
+    border-collapse: collapse;
+    position: relative;
+}
+table.velha-table th { /*setando para todos os elementos */
+    text-align: center;
+    font-size: 50px;
+    font-family: cursive;
+    color: #ffffff;
+    width: 100px;
+    height: 100px;
+    
+}
+table.velha-table th:hover {
+    cursor: pointer;
+}
+
+
+.botao{
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: initial;
+    color: lavender;
+}
+
+.botao:hover{
+    cursor: pointer;
+    background-color: inherit;
+}
+/* Colocando bordas na tabela */
+.linha1#e0{
+    border-bottom: 3px ridge #ffffff;
+}
+.linha1#e1{
+    border-bottom: 3px ridge #ffffff;
+    border-right: 3px ridge #ffffff;
+    border-left: 3px ridge #ffffff; 
+    
+}
+.linha1#e2{
+    border-bottom: 3px ridge #ffffff;
+    
+}
+
+.linha2#e4{
+    border-left: 3px ridge #ffffff;
+    border-right: 3px ridge #ffffff; 
+    
+}
+.linha3#e6{
+    border-top: 3px ridge #ffffff;
+    
+}
+.linha3#e7{
+    border-right: 3px ridge #ffffff;
+    border-top: 3px ridge #ffffff; 
+    border-left: 3px ridge #ffffff; 
+    
+}
+.linha3#e8{
+    border-top: 3px ridge #ffffff;
+}/* Fim da tabela */
+
+@media(max-width : 400px){
+    table{
+        width: 250px;
+        height: 278px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+    }
+}
+
+@media(min-width: 800px){
+    table{
+        width: 450px;
+        height: 514px;
+        text-align: center;
+        margin: auto;
+    }
+}
