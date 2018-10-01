@@ -1,23 +1,28 @@
 body{
     background-color: #34495e;
 }
-.est-aviso{
+.est-aviso{ /* */
     font-size: 30px;
     color: red;
-    margin: 0px;
+    margin: auto;
 }
 .est-resultado{
     font-size: 25px;
+    color: rgb(11, 221, 11);
+    margin: auto;
 }
 h1{
     text-align: center;
     color: #ffffff;
+    margin: auto;
 }
 .img-velha.mostra{
     display: block;
 }
 .img-velha{
     position: absolute;
+    top: 175px;
+    left: 485px;
     z-index: 1;
     display: none;
 }
@@ -25,6 +30,9 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.principal-div{
+    position: relative;
 }
 
 .botao-div{
@@ -36,15 +44,17 @@ table{
     margin: auto;
     border-collapse: collapse;
     position: relative;
+    width: 550px;
+    height: 614px;
 }
-table.velha-table th { /*setando para todos os elementos */
+table.velha-table th { /* para todos os elementos da table */
     text-align: center;
-    font-size: 50px;
+    font-size: 70px;
     font-family: cursive;
     color: #ffffff;
     width: 100px;
     height: 100px;
-    
+    font-weight: bold;
 }
 table.velha-table th:hover {
     cursor: pointer;
@@ -64,6 +74,133 @@ table.velha-table th:hover {
 .botao:hover{
     cursor: pointer;
     background-color: inherit;
+}
+
+.l1.mostra-r{
+    display: block;
+}
+/* Linhas horizontais de marcação de quem ganhou */
+.l1{
+    width: 550px;
+    height: 3px;
+    background: rgb(11, 221, 11);
+    display: none;
+    position: absolute;
+    top: 110px;
+    left: 390px;
+    border-radius: 5px;
+    z-index: 1; 
+
+}
+
+.l2.mostra-r{
+    display: block;
+}
+
+.l2{
+    width: 550px;
+    height: 3px;
+    background: rgb(11, 221, 11);
+    display: none;
+    position: absolute;
+    top: 315px;
+    left: 390px;
+    border-radius: 5px;
+    z-index: 1; 
+}
+.l3.mostra-r{
+    display: block;
+}
+
+.l3{
+    width: 550px;
+    height: 3px;
+    background: rgb(11, 221, 11);
+    display: none;
+    position: absolute;
+    top: 520px;
+    left: 390px;
+    border-radius: 5px;
+    z-index: 1; 
+}
+/* Linhas verticais de marcação de quem ganhou */
+.c1.mostra-r{
+    display: block;
+}
+
+.c1{
+    width: 3px;
+    height: 550px;
+    background: rgb(11, 221, 11);
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 480px;
+    border-radius: 5px;
+    z-index: 1; 
+}
+.c2.mostra-r{
+    display: block;
+}
+
+.c2{
+    width: 3px;
+    height: 550px;
+    background: rgb(11, 221, 11);
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 665px;
+    border-radius: 5px;
+    z-index: 1; 
+}
+.c3.mostra-r{
+    display: block;
+}
+
+.c3{
+    width: 3px;
+    height: 550px;
+    background: rgb(11, 221, 11);
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 850px;
+    border-radius: 5px;
+    z-index: 1; 
+}
+/* colocando as diagonais */
+.d1.mostra-r{
+    display: block;
+}
+
+.d1{
+    width: 3px;
+    height: 645px;
+    background: rgb(11, 221, 11);
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 665px;
+    border-radius: 5px;
+    z-index: 1;
+    transform: rotate(138deg);
+}
+.d2.mostra-r{
+    display: block;
+}
+
+.d2{
+    width: 3px;
+    height: 650px;
+    background: rgb(11, 221, 11);
+    display: none;
+    position: absolute;
+    top: -5px;
+    left: 660px;
+    border-radius: 5px;
+    z-index: 1;
+    transform: rotate(42deg);
 }
 /* Colocando bordas na tabela */
 .linha1#e0{
@@ -99,22 +236,50 @@ table.velha-table th:hover {
     border-top: 3px ridge #ffffff;
 }/* Fim da tabela */
 
-@media(max-width : 400px){
+/* @media(max-width : 420px){
     table{
-        width: 250px;
-        height: 278px;
+        width: 430px;
+        height: 504px;
         text-align: center;
         align-items: center;
         justify-content: center;
-
     }
-}
-
-@media(min-width: 800px){
+    .l1.mostra-r{
+        display: block;
+    }
+    
+    .l1{
+        width: 350px;
+        height: 3px;
+        background: rgb(11, 221, 11);
+        display: none;
+        position: absolute;
+        transition-timing-function: ease;
+        z-index: 1;
+    }
+} */
+/* 
+@media(min-width: 900px){
     table{
-        width: 450px;
-        height: 514px;
+        width: 550px;
+        height: 614px;
         text-align: center;
         margin: auto;
     }
-}
+    .l1.mostra-r{
+        display: block;
+    }
+    
+    .l1{
+        width: 450px;
+        height: 3px;
+        background: rgb(11, 221, 11);
+        display: none;
+        position: absolute;
+        transition-timing-function: ease;
+        border-radius: 5px;
+        z-index: 1;
+    }
+} */
+
+

@@ -4,14 +4,13 @@ vetorzinho = new Array(9).fill(null);//.fill preenche todos os campos com o que 
 function escolha(p) {
     novoJogo();//chamando a função para limpar a tela
     document.getElementById("resultado").innerHTML = '';//limpando o mostra ganhador
-    document.getElementById("aviso").innerHTML = ''; //limpando o aviso
+    // document.getElementById("aviso").innerHTML = ''; //limpando o aviso
     escB = p;// x é o parametro de x e O é o parametro de O
 }
 
 function novoJogo() {
-    for (let i = 0; i < 9; i++) {
-        vetorzinho[i] = null; //passando os valores do vetor para null
-    }
+    vetorzinho = new Array(9).fill(null);
+    
     document.getElementById("e0").innerHTML = ''; //cada posição volta para tela inicial
     document.getElementById("e1").innerHTML = '';
     document.getElementById("e2").innerHTML = '';
@@ -149,97 +148,134 @@ function verifica() {
             document.getElementById("resultado").innerHTML = "Ganhador: X"; //printa na tela o ganhador X
             para();
             document.getElementById("aviso").innerHTML = "Fim do jogo! click em Novo jogo para jogar novamente!"
-            // document.getElementById("aviso").innerHTML = "Fim do jogo! click em Novo jogo para jogar novamente!"
+            var element = document.getElementsByClassName("l1")[0];
+            element.classList.add("mostra-r");
         }
         else {
             document.getElementById("resultado").innerHTML = "Ganhador: O"; // printa na tela o ganhador O
             para();
             document.getElementById("aviso").innerHTML = "Fim do jogo! click em Novo jogo para jogar novamente!"
+            var element = document.getElementsByClassName("l1")[0];
+            element.classList.add("mostra-r");
         }
     }
-    else if ((vetorzinho[3] == vetorzinho[4]) && (vetorzinho[4] == vetorzinho[5]) && (vetorzinho[3] != null)) {// compara as 3 casas do meio na horizontal
+    // compara as 3 casas do meio na horizontal
+    else if ((vetorzinho[3] == vetorzinho[4]) && (vetorzinho[4] == vetorzinho[5]) && (vetorzinho[3] != null)) {
         if (vetorzinho[3] == 'x') {
             document.getElementById("resultado").innerHTML = "Ganhador: X";
             para();
             document.getElementById("aviso").innerHTML = "Fim do jogo! click em Novo jogo para jogar novamente!"
+            var element = document.getElementsByClassName("l2")[0];
+            element.classList.add("mostra-r");
         }
         else {
             document.getElementById("resultado").innerHTML = "Ganhador: O";
             para();
             document.getElementById("aviso").innerHTML = "Fim do jogo! click em Novo jogo para jogar novamente!"
+            var element = document.getElementsByClassName("l2")[0];
+            element.classList.add("mostra-r");
         }
     }
-    else if ((vetorzinho[6] == vetorzinho[7]) && (vetorzinho[7] == vetorzinho[8]) && (vetorzinho[6] != null)) {// compara as 3 casas de baixo na horizontal
+    // compara as 3 casas de baixo na horizontal
+    else if ((vetorzinho[6] == vetorzinho[7]) && (vetorzinho[7] == vetorzinho[8]) && (vetorzinho[6] != null)) {
         if (vetorzinho[6] == 'x') {
             document.getElementById("resultado").innerHTML = "Ganhador: X";
             para();
             document.getElementById("aviso").innerHTML = "Fim do jogo! click em Novo jogo para jogar novamente!"
+            var element = document.getElementsByClassName("l3")[0];
+            element.classList.add("mostra-r");
         }
         else {
             document.getElementById("resultado").innerHTML = "Ganhador: O";
             para();
             document.getElementById("aviso").innerHTML = "Fim do jogo! click em Novo jogo para jogar novamente!"
+            var element = document.getElementsByClassName("l3")[0];
+            element.classList.add("mostra-r");
         }
     }
+    // compara as 3 casas da esquerda na vertical
     else if ((vetorzinho[0] == vetorzinho[3]) && (vetorzinho[3] == vetorzinho[6]) && (vetorzinho[0] != null)) {
         if (vetorzinho[0] == 'x') {
             document.getElementById("resultado").innerHTML = "Ganhador: X";
             para();
             document.getElementById("aviso").innerHTML = "Fim do jogo! click em Novo jogo para jogar novamente!"
+            var element = document.getElementsByClassName("c1")[0];
+            element.classList.add("mostra-r");
         }
         else {
             document.getElementById("resultado").innerHTML = "Ganhador: O";
             para();
             document.getElementById("aviso").innerHTML = "Fim do jogo! click em Novo jogo para jogar novamente!"
+            var element = document.getElementsByClassName("c1")[0];
+            element.classList.add("mostra-r");
         }
     }
+    // compara as 3 casas do meio na vertical
     else if ((vetorzinho[1] == vetorzinho[4]) && (vetorzinho[4] == vetorzinho[7]) && (vetorzinho[1] != null)) {
         if (vetorzinho[1] == 'x') {
             document.getElementById("resultado").innerHTML = "Ganhador: X";
             para();
             document.getElementById("aviso").innerHTML = "Fim do jogo! click em Novo jogo para jogar novamente!"
+            var element = document.getElementsByClassName("c2")[0];
+            element.classList.add("mostra-r");
         }
         else {
             document.getElementById("resultado").innerHTML = "Ganhador: O";
             para();
             document.getElementById("aviso").innerHTML = "Fim do jogo! click em Novo jogo para jogar novamente!"
+            var element = document.getElementsByClassName("c2")[0];
+            element.classList.add("mostra-r");
         }
     }
+    // compara as 3 casas da direita na vertical
     else if ((vetorzinho[2] == vetorzinho[5]) && (vetorzinho[5] == vetorzinho[8]) && (vetorzinho[2] != null)) {
         if (vetorzinho[2] == 'x') {
             document.getElementById("resultado").innerHTML = "Ganhador: X";
             para();
             document.getElementById("aviso").innerHTML = "Fim do jogo! click em Novo jogo para jogar novamente!"
+            var element = document.getElementsByClassName("c3")[0];
+            element.classList.add("mostra-r");
         }
         else {
             document.getElementById("resultado").innerHTML = "Ganhador: O";
             para();
             document.getElementById("aviso").innerHTML = "Fim do jogo! click em Novo jogo para jogar novamente!"
+            var element = document.getElementsByClassName("c3")[0];
+            element.classList.add("mostra-r");
         }
     }
-
-    else if ((vetorzinho[0] == vetorzinho[4]) && (vetorzinho[4] == vetorzinho[8]) && (vetorzinho[0] != null)) { //compara a diagonal da esquerda para direita
+    //compara a diagonal da esquerda para direita
+    else if ((vetorzinho[0] == vetorzinho[4]) && (vetorzinho[4] == vetorzinho[8]) && (vetorzinho[0] != null)) {
         if (vetorzinho[0] == 'x') {
             document.getElementById("resultado").innerHTML = "Ganhador: X";
             para();
             document.getElementById("aviso").innerHTML = "Fim do jogo! click em Novo jogo para jogar novamente!"
+            var element = document.getElementsByClassName("d1")[0];
+            element.classList.add("mostra-r");
         }
         else {
             document.getElementById("resultado").innerHTML = 'Ganhador: O';
             para();
             document.getElementById("aviso").innerHTML = "Fim do jogo! click em Novo jogo para jogar novamente!"
+            var element = document.getElementsByClassName("d1")[0];
+            element.classList.add("mostra-r");
         }
     }
-    else if ((vetorzinho[2] == vetorzinho[4]) && (vetorzinho[4] == vetorzinho[6]) && (vetorzinho[2] != null)) { // compara a diagonal da direita para esquerda
+    // compara a diagonal da direita para esquerda
+    else if ((vetorzinho[2] == vetorzinho[4]) && (vetorzinho[4] == vetorzinho[6]) && (vetorzinho[2] != null)) {
         if (vetorzinho[2] == 'x') {
             document.getElementById("resultado").innerHTML = "Ganhador: X";
             para();
             document.getElementById("aviso").innerHTML = "Fim do jogo! click em Novo jogo para jogar novamente!"
+            var element = document.getElementsByClassName("d2")[0];
+            element.classList.add("mostra-r");
         }
         else {
             document.getElementById("resultado").innerHTML = "Ganhador: O";
             para();
             document.getElementById("aviso").innerHTML = "Fim do jogo! click em Novo jogo para jogar novamente!"
+            var element = document.getElementsByClassName("d2")[0];
+            element.classList.add("mostra-r");
         }
     }
     else if (vetorzinho.indexOf(null) == -1) {
